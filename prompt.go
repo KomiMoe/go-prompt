@@ -138,6 +138,22 @@ func (p *Prompt) Run() {
 	}
 }
 
+func (p *Prompt) Render() *Renderer {
+	return p.renderer
+}
+
+func (p *Prompt) CompletionManager() *CompletionManager {
+	return p.completion
+}
+
+func (p *Prompt) GetBuffer() *Buffer {
+	return p.buffer
+}
+
+func (p *Prompt) GetLexer() Lexer {
+	return p.lexer
+}
+
 // func Log(format string, a ...any) {
 // 	f, err := os.OpenFile("log", os.O_RDWR|os.O_CREATE|os.O_APPEND, 0666)
 // 	if err != nil {
